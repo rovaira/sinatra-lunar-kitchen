@@ -34,13 +34,15 @@ class Recipe
       this_item_ingredients = []
       ingredient_array.to_a.each do |food|
         if item["id"] == food["recipe_id"]
-          food_object = Ingredient.new(food["id"], food["name"], food["recipe_id"])
-          this_item_ingredients << food_object
+          this_item_ingredients << Ingredient.new(food["name"])
         end
       end
 
-      recipe = Recipe.new(item["id"], item["name"], item["description"], item["instructions"], this_item_ingredients)
-      all_recipes << recipe
+      all_recipes << Recipe.new(item["id"],
+                                item["name"],
+                                item["description"],
+                                item["instructions"],
+                                this_item_ingredients)
     end
 
     all_recipes
