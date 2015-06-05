@@ -60,7 +60,7 @@ ALTER SEQUENCE ingredients_id_seq OWNED BY ingredients.id;
 
 
 --
--- Name: recipes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+-- Name: recipes; Type: TABLE; Schema: public; Owner: -; Tablespace:
 --
 
 CREATE TABLE recipes (
@@ -6687,7 +6687,7 @@ SELECT pg_catalog.setval('recipes_id_seq', 1013, true);
 
 
 --
--- Name: ingredients_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+-- Name: ingredients_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace:
 --
 
 ALTER TABLE ONLY ingredients
@@ -6695,7 +6695,7 @@ ALTER TABLE ONLY ingredients
 
 
 --
--- Name: recipes_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+-- Name: recipes_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace:
 --
 
 ALTER TABLE ONLY recipes
@@ -6703,7 +6703,7 @@ ALTER TABLE ONLY recipes
 
 
 --
--- Name: index_ingredients_on_recipe_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+-- Name: index_ingredients_on_recipe_id; Type: INDEX; Schema: public; Owner: -; Tablespace:
 --
 
 CREATE INDEX index_ingredients_on_recipe_id ON ingredients USING btree (recipe_id);
@@ -6722,4 +6722,3 @@ GRANT ALL ON SCHEMA public TO PUBLIC;
 --
 -- PostgreSQL database dump complete
 --
-
